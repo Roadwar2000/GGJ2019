@@ -1,22 +1,64 @@
 fileFormatVersion: 2
-guid: 89c56fb6ca8022048b9ab90b81711c3a
+guid: 3d1cee7b3e6eb384da8a6f557ae87e89
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Layer0_001
-    100002: //RootNode
-    100004: trumpet_001
-    400000: Layer0_001
-    400002: //RootNode
-    400004: trumpet_001
-    2100000: wire_177028149
-    2100002: wire_229166215
-    2300000: Layer0_001
-    2300002: trumpet_001
-    3300000: Layer0_001
-    3300002: trumpet_001
-    4300000: Layer0_001
-    4300002: trumpet_001
+    100000: Group_011
+    100002: Group_012
+    100004: Group_013
+    100006: Group_016
+    100008: Group_017
+    100010: Group_019
+    100012: Group_021
+    100014: Group_025
+    100016: Object001
+    100018: //RootNode
+    400000: Group_011
+    400002: Group_012
+    400004: Group_013
+    400006: Group_016
+    400008: Group_017
+    400010: Group_019
+    400012: Group_021
+    400014: Group_025
+    400016: Object001
+    400018: //RootNode
+    2100000: Group_011Mat
+    2100002: Group_012Mat
+    2100004: Group_013Mat
+    2100006: Group_016Mat
+    2100008: Group_017Mat
+    2100010: Group_019Mat
+    2100012: Group_021Mat
+    2100014: Group_025Mat
+    2100016: Object001Mat
+    2300000: Group_011
+    2300002: Group_012
+    2300004: Group_013
+    2300006: Group_016
+    2300008: Group_017
+    2300010: Group_019
+    2300012: Group_021
+    2300014: Group_025
+    2300016: Object001
+    3300000: Group_011
+    3300002: Group_012
+    3300004: Group_013
+    3300006: Group_016
+    3300008: Group_017
+    3300010: Group_019
+    3300012: Group_021
+    3300014: Group_025
+    3300016: Object001
+    4300000: Group_011
+    4300002: Group_012
+    4300004: Group_013
+    4300006: Group_016
+    4300008: Group_017
+    4300010: Group_019
+    4300012: Group_021
+    4300014: Group_025
+    4300016: Object001
   externalObjects: {}
   materials:
     importMaterials: 1

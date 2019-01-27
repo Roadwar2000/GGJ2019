@@ -1,68 +1,16 @@
 fileFormatVersion: 2
-guid: ea504db8e4b4539458ff7f3a0c705b40
+guid: 2aca4e60e66f11842b7d25eeb799950b
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: bip forearm scale L
-    100002: bip hand L
-    100004: bip index 0 L
-    100006: bip index 1 L
-    100008: bip index 2 L
-    100010: bip lowerArm L
-    100012: bip middle 0 L
-    100014: bip middle 1 L
-    100016: bip middle 2 L
-    100018: bip mind stone L
-    100020: bip pinky 0 L
-    100022: bip pinky 1 L
-    100024: bip pinky 2 L
-    100026: bip power stone L
-    100028: bip reality stone L
-    100030: bip ring 0 L
-    100032: bip ring 1 L
-    100034: bip ring 2 L
-    100036: bip soul stone L
-    100038: bip space stone L
-    100040: bip thumb 0 L
-    100042: bip thumb 1 L
-    100044: bip thumb 2 L
-    100046: bip thumb plates L
-    100048: bip time stone L
-    100050: //RootNode
-    100052: Object001
-    400000: bip forearm scale L
-    400002: bip hand L
-    400004: bip index 0 L
-    400006: bip index 1 L
-    400008: bip index 2 L
-    400010: bip lowerArm L
-    400012: bip middle 0 L
-    400014: bip middle 1 L
-    400016: bip middle 2 L
-    400018: bip mind stone L
-    400020: bip pinky 0 L
-    400022: bip pinky 1 L
-    400024: bip pinky 2 L
-    400026: bip power stone L
-    400028: bip reality stone L
-    400030: bip ring 0 L
-    400032: bip ring 1 L
-    400034: bip ring 2 L
-    400036: bip soul stone L
-    400038: bip space stone L
-    400040: bip thumb 0 L
-    400042: bip thumb 1 L
-    400044: bip thumb 2 L
-    400046: bip thumb plates L
-    400048: bip time stone L
-    400050: //RootNode
-    400052: Object001
-    2100000: 'Material #33'
-    4300000: Object001
-    7400000: Take 001
-    9500000: //RootNode
-    13700000: Object001
-    2186277476908879412: ImportLogs
+    100000: //RootNode
+    100002: Tuba
+    400000: //RootNode
+    400002: Tuba
+    2100000: TubaMat
+    2300000: Tuba
+    3300000: Tuba
+    4300000: Tuba
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -115,8 +63,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.001
-    hasPreviousCalculatedGlobalScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -143,7 +91,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
