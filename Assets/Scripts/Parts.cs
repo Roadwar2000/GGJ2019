@@ -5,8 +5,8 @@ using UnityEngine;
 public class Parts : MonoBehaviour
 {
     [SerializeField]
-    private float forceMultiplier = 2f;
-
+    public InstrumentsSO instrument;
+    
     [SerializeField]
     private float xDir = 0.0f;
 
@@ -24,6 +24,7 @@ public class Parts : MonoBehaviour
     private float yForce;
 
     private Rigidbody rb;
+    private AudioSource ss;
 
     void Start()
     {
@@ -36,6 +37,10 @@ public class Parts : MonoBehaviour
         yRot = Random.Range(-.1f, 5f);
 
         rb.AddForce(xForce, yForce, 0, ForceMode.Impulse);
+
+        ss = GetComponent<AudioSource>();
+        ss.volume = instrument.CollisionVolume;
+        ss.clip = instrument.Collision;
     }
 
     void FixedUpdate()
@@ -51,12 +56,20 @@ public class Parts : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        // Play musical sound for this instrument
+        ss.volume = instrument.SoundVolume;
+        ss.clip = instrument.Sound;
+
+        // Play collision sound for this instrument
+        ss.volume = instrument.CollisionVolume;
+        ss.clip = instrument.Collision;
+
         if (!Bounce)
         {
             xDir -= xDir;
             yDir -= yDir;
-            xForce -= xForce*forceMultiplier;
-            yForce -= yForce*forceMultiplier;
+            xForce -= xForce*instrument.ForceMultiplier;
+            yForce -= yForce*instrument.ForceMultiplier;
             rb.AddForce(xForce, yForce, 0, ForceMode.Impulse);
             //Bounce = true;
         }
