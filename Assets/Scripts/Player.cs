@@ -67,7 +67,7 @@ public class Player : MonoBehaviour
             if (!moveTrayUp)
             {
                 moveTrayUp = true;
-                //GameObject.Find("Tray").GetComponent<Animator>().enabled = true;
+                GameObject.Find("Tray").GetComponent<Animator>().enabled = true;
             }
         }
     }
