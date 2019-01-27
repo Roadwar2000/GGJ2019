@@ -5,7 +5,7 @@ using UnityEngine;
 public class Parts : MonoBehaviour
 {
     [SerializeField]
-    private float forceMultiplier = 1.75f;
+    private float forceMultiplier = 2f;
 
     [SerializeField]
     private float xDir = 0.0f;

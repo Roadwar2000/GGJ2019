@@ -11,8 +11,11 @@ ModelImporter:
     400004: root
     2100000: 'Material #65'
     2300000: Object001
+    2300002: //RootNode
     3300000: Object001
+    3300002: //RootNode
     4300000: Object001
+    7400000: Take 001
     9500000: //RootNode
   externalObjects:
   - first:
@@ -24,17 +27,17 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: dirt_null
-    second: {fileID: 2800000, guid: 80f01858c56098243bfe5d88b1459434, type: 3}
+    second: {fileID: 2800000, guid: 5add7d2b4a5459d40a05cda8bc90489b, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: prp_orl_megalute_d
-    second: {fileID: 2800000, guid: 0ed8c243c0cbd3b43890df0e3cb4ebb5, type: 3}
+    second: {fileID: 2800000, guid: 72ace4f04a71ea8458e22d34a94bf1be, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: prp_orl_megalute_n
-    second: {fileID: 2800000, guid: 037b87c2f726f45498e314f7596895fb, type: 3}
+    second: {fileID: 2800000, guid: 7cb390ad2b07c29458f9f038b99deb40, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
@@ -65,7 +68,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 100
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1

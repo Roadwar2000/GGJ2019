@@ -17,7 +17,17 @@ ModelImporter:
     3300002: trumpet_001
     4300000: Layer0_001
     4300002: trumpet_001
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wire_177028149
+    second: {fileID: 2100000, guid: 1e7f3b848f63db345bf4863d5f57fb07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wire_229166215
+    second: {fileID: 2100000, guid: 5403d480ba356fc479605a8c6373ad68, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
