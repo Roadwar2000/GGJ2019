@@ -17,5 +17,5 @@ MonoBehaviour:
   ForceMultiplier: 2
   Sound: {fileID: 8300000, guid: 693af8b68ccaa3046be4a8475cd4b9c7, type: 3}
   SoundVolume: 100
-  Collision: {fileID: 0}
+  Collision: {fileID: 8300000, guid: 763b640c623c0464ca6be11b96080a61, type: 3}
   CollisionVolume: 100

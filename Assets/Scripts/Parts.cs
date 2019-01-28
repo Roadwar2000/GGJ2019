@@ -56,22 +56,39 @@ public class Parts : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        // Play musical sound for this instrument
-        ss.volume = instrument.SoundVolume;
-        ss.clip = instrument.Sound;
-
         // Play collision sound for this instrument
-        ss.volume = instrument.CollisionVolume;
-        ss.clip = instrument.Collision;
+        PlayCollision();
 
         if (!Bounce)
         {
             xDir -= xDir;
             yDir -= yDir;
-            xForce -= xForce*instrument.ForceMultiplier;
-            yForce -= yForce*instrument.ForceMultiplier;
+            xForce -= xForce * instrument.ForceMultiplier;
+            yForce -= yForce * instrument.ForceMultiplier;
             rb.AddForce(xForce, yForce, 0, ForceMode.Impulse);
             //Bounce = true;
+        }
+    }
+
+    public void PlayInstrument()
+    {
+        // Play musical sound for this instrument
+        ss.volume = instrument.SoundVolume;
+        ss.clip = instrument.Sound;
+        ss.Play();
+
+    }
+
+    public void PlayCollision()
+    {
+        if (!ss.isPlaying)
+        {
+            ss.volume = instrument.CollisionVolume;
+            ss.clip = instrument.Collision;
+            var volume = instrument.CollisionVolume;
+            Debug.Log("Collision clip: " + ss.clip.name);
+            Debug.Log("Collision volume: " + volume);
+            ss.Play();
         }
     }
 }

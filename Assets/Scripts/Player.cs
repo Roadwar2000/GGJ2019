@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -17,11 +18,14 @@ public class Player : MonoBehaviour
 
     private bool moveTrayUp = false;
     private bool moveTrayDown = false;
+    private bool gotinstrument = false;
+    private GameObject theGrabbedInstr;
+    private int count = 17;
 
     void Start()
     {
-        Cursor.visible = false;
-        GameObject.Find("Tray").GetComponent<Animator>().enabled = false;
+       Cursor.visible = false;
+     //   GameObject.Find("Tray").GetComponent<Animator>().enabled = false;
     }
 
     void Update()
@@ -40,20 +44,20 @@ public class Player : MonoBehaviour
         mouse.x = Input.mousePosition.x-725f;
         mouse.y = Input.mousePosition.y-350f;
 
-        Debug.Log("x=" + mouse.x.ToString());
-        Debug.Log("y=" + mouse.y.ToString());
+ //       Debug.Log("x=" + mouse.x.ToString());
+ //       Debug.Log("y=" + mouse.y.ToString());
 
         mouse.x *= movementSpeed;
         mouse.y *= movementSpeed;
 
-        Debug.Log("damp x=" + mouse.x.ToString());
-        Debug.Log("damp y=" + mouse.y.ToString());
+ //       Debug.Log("damp x=" + mouse.x.ToString());
+ //       Debug.Log("damp y=" + mouse.y.ToString());
 
         mouse.x = Mathf.Clamp(mouse.x, limitXMovementMin, limitXMovementMax);
         mouse.y = Mathf.Clamp(mouse.y, limitYMovementMin, limitYMovementMax);
 
-        Debug.Log("clamp x=" + mouse.x.ToString());
-        Debug.Log("clamp y=" + mouse.y.ToString());
+ //       Debug.Log("clamp x=" + mouse.x.ToString());
+ //       Debug.Log("clamp y=" + mouse.y.ToString());
 
         position.x = mouse.x; 
         position.y = mouse.y; 
@@ -63,12 +67,70 @@ public class Player : MonoBehaviour
 
         if (down)
         {
+            /*
             // If mouse is down
             if (!moveTrayUp)
             {
                 moveTrayUp = true;
                 GameObject.Find("Tray").GetComponent<Animator>().enabled = true;
             }
+            */
+
+            if (!gotinstrument)
+            {
+                RaycastHit hit;
+                if (Physics.Raycast(transform.position, -Vector3.up, out hit))
+                {
+                    var iname = hit.collider.gameObject.name;
+                    Debug.Log("gotinstrument = " + iname);
+                    if ((iname != "Left Board" && iname != "Top Board" && iname != "Right Board" && iname != "Bottom Board"))
+                    {
+                        hit.collider.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+                        hit.collider.gameObject.transform.parent = this.transform;
+                        gotinstrument = true;
+                        theGrabbedInstr = hit.collider.gameObject;
+
+                    }
+
+                }
+            }
+
+        }
+            
+        if (Input.GetMouseButtonUp(1) && gotinstrument)
+            {
+                if (theGrabbedInstr != null)
+                {
+                    theGrabbedInstr.GetComponent<AudioSource>().clip = theGrabbedInstr.GetComponent<Parts>().instrument.Collision;
+                    Debug.Log("Collision sound: " + theGrabbedInstr.GetComponent<Parts>().instrument.Collision);
+                    Debug.Log("Clip name: " + theGrabbedInstr.GetComponent<AudioSource>().clip.name);
+                    theGrabbedInstr.GetComponent<AudioSource>().Play();
+                   // theGrabbedInstr.GetComponent<ParticleSystem>().Play();
+
+                     Destroy(theGrabbedInstr, .01f);
+                    Debug.Log("thegrabbedinstr " + theGrabbedInstr.name + " was destroyed");
+                    gotinstrument = false;
+                    count--;
+                }
+
+            if (count == 0)
+            {
+                SceneManager.LoadSceneAsync("Home");
+
+
+            }
         }
     }
+    /*
+        void FixedUpdate()
+        {
+            RaycastHit hit;
+
+            if (Physics.Raycast(transform.position, -Vector3.up, out hit))
+            {
+               // Debug.Log("Found an object - distance: " + hit.distance);
+                Debug.Log("Hit Collider: " + hit.collider.name);
+            }
+        }
+    */
 }
