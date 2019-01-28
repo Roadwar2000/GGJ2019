@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Tremelo
   Number: 5
   ForceMultiplier: 2
-  Sound: {fileID: 0}
+  Sound: {fileID: 8300000, guid: 59c0a4e6ee9798a47a13a0826b5f92d5, type: 3}
   SoundVolume: 100
   Collision: {fileID: 8300000, guid: b1955420914331a49b13c450f7f9f963, type: 3}
   CollisionVolume: 100

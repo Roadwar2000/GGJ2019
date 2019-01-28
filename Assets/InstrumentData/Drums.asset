@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Drums
   Number: 1
   ForceMultiplier: 2
-  Sound: {fileID: 0}
+  Sound: {fileID: 8300000, guid: cda4690c58bb62b4fb9c4e761f164693, type: 3}
   SoundVolume: 100
   Collision: {fileID: 8300000, guid: 549de14a19a19564b9c62e14dd28a938, type: 3}
   CollisionVolume: 100

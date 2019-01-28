@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Wazoon
   Number: 3
   ForceMultiplier: 2
-  Sound: {fileID: 0}
+  Sound: {fileID: 8300000, guid: 9d9dc54917c8d6240869fee3924ea0a0, type: 3}
   SoundVolume: 100
   Collision: {fileID: 8300000, guid: a9a9cd77686f27a46a1649a6120f9336, type: 3}
   CollisionVolume: 100

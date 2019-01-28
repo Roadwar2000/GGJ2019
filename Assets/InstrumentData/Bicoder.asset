@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Bicorder
   Number: 4
   ForceMultiplier: 2
-  Sound: {fileID: 0}
+  Sound: {fileID: 8300000, guid: 1836052588f43874fb3d92a96ad4a5c7, type: 3}
   SoundVolume: 100
   Collision: {fileID: 8300000, guid: 50214d11db1e4f24898646eb45e1d36a, type: 3}
   CollisionVolume: 100

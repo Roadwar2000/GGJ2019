@@ -72,6 +72,8 @@ public class Parts : MonoBehaviour
 
     public void PlayInstrument()
     {
+        Debug.Log("Playing my music!");
+
         // Play musical sound for this instrument
         ss.volume = instrument.SoundVolume;
         ss.clip = instrument.Sound;

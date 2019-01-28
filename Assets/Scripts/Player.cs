@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     private bool moveTrayDown = false;
     private bool gotinstrument = false;
     private GameObject theGrabbedInstr;
-    private int count = 17;
+    private int count = 18;
 
     void Start()
     {
@@ -89,7 +89,7 @@ public class Player : MonoBehaviour
                         hit.collider.gameObject.transform.parent = this.transform;
                         gotinstrument = true;
                         theGrabbedInstr = hit.collider.gameObject;
-
+                        theGrabbedInstr.GetComponent<Parts>().PlayInstrument();
                     }
 
                 }
@@ -116,8 +116,6 @@ public class Player : MonoBehaviour
             if (count == 0)
             {
                 SceneManager.LoadSceneAsync("Home");
-
-
             }
         }
     }

@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Horn
   Number: 8
   ForceMultiplier: 2
-  Sound: {fileID: 0}
+  Sound: {fileID: 8300000, guid: d7914c1009544be459309d61edeed1c6, type: 3}
   SoundVolume: 100
   Collision: {fileID: 8300000, guid: 763b640c623c0464ca6be11b96080a61, type: 3}
   CollisionVolume: 100

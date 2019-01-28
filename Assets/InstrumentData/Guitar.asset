@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Guitar
   Number: 6
   ForceMultiplier: 2
-  Sound: {fileID: 0}
+  Sound: {fileID: 8300000, guid: 59c0a4e6ee9798a47a13a0826b5f92d5, type: 3}
   SoundVolume: 100
   Collision: {fileID: 8300000, guid: 20c9d67828f6bcb4bb3d60f6b602c8c1, type: 3}
   CollisionVolume: 100
